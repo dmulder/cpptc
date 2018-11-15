@@ -16,8 +16,8 @@ class Token:
         elif len(mylexeme) > 1 and (mylexeme[0] == "'" and mylexeme[-1] == "'"):
             return "character"
         elif len(mylexeme) > 1 and (mylexeme[0] == '"' and mylexeme[-1] == '"'):
-            return "stringz"
-        elif mylexeme in ['bool', 'class', 'char', 'cin', 'cout', 'else', 'false', 'if', 'int', 'itoa', 'main', 'new', 'null', 'object', 'public', 'private', 'return', 'true', 'void', 'while']:
+            return "string"
+        elif mylexeme in ['bool', 'class', 'char', 'cin', 'cout', 'else', 'false', 'if', 'int', 'itoa', 'main', 'new', 'null', 'object', 'public', 'private', 'return', 'true', 'void', 'while', 'ifndef', 'ifdef', 'define']:
             return mylexeme # keywords
         elif re.match("[a-zA-Z0-9_]+", mylexeme):
             return "identifier"
