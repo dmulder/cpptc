@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+import sys
+
+def MessageHandler(message):
+    sys.stderr.write(message + '\n')
+    exit(1)
 
 class SymbolTable:
 	def __init__(self):
